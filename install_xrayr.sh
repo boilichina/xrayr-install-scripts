@@ -115,7 +115,7 @@ EOF
 
 # 开启和配置防火墙
 echo "配置防火墙中..."
-sudo ufw enable
+yew | sudo ufw enable
 sudo ufw allow http
 sudo ufw allow https
 sudo ufw allow 22/tcp
