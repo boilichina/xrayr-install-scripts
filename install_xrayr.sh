@@ -52,8 +52,8 @@ ConnectionConfig:
 Nodes:
   - PanelType: "NewV2board"
     ApiConfig:
-      ApiHost: "https://proxy.mayi520.shop"
-      ApiKey: "ZNed798q7983ldEDwejhewg"
+      ApiHost: "https://x.mayi520.shop"
+      ApiKey: "F9U42H892HFEWOIHFJ298"
       NodeID: $node_id
       NodeType: Trojan
       Timeout: 30
