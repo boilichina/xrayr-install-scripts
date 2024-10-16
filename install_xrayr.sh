@@ -9,6 +9,14 @@ read -p "请输入你的面板ID: " node_id
 echo "正在安装 XrayR..."
 bash <(curl -Ls https://raw.githubusercontent.com/XrayR-project/XrayR-release/master/install.sh)
 
+# 开启和配置防火墙
+echo "配置防火墙中..."
+yew | sudo ufw enable
+sudo ufw allow http
+sudo ufw allow https
+sudo ufw allow 22/tcp
+sudo ufw reload
+
 # 安装 Certbot
 echo "正在安装 certbot..."
 sudo apt update
@@ -113,13 +121,6 @@ Nodes:
         KeyFile: "$privkey_path"
 EOF
 
-# 开启和配置防火墙
-echo "配置防火墙中..."
-yew | sudo ufw enable
-sudo ufw allow http
-sudo ufw allow https
-sudo ufw allow 22/tcp
-sudo ufw reload
 
 # 重启 XrayR
 echo "重启 XrayR..."
